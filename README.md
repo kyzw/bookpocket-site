@@ -1,24 +1,25 @@
 # bookpocket-site
 
-Book Pocket（個人開発の本棚アプリ）の公開用サイトです。GitHub Pages で公開します。
+Book Pocket（Web / PWA の本棚アプリ）の公開先です。アプリ本体の非公開リポジトリとは別に、生成済みの公開資材を配置します。
 
-## 内容
-
-- [プライバシーポリシー](privacy-policy/index.html)
+- [本棚](https://kyzw.github.io/bookpocket-site/)
+- [プライバシーポリシー](https://kyzw.github.io/bookpocket-site/privacy-policy/)
 - [お問い合わせ（GitHub Issues）](https://github.com/kyzw/bookpocket-site/issues)
 
-アプリ本体のリポジトリ（private）とは別に、公開情報だけを置くためのリポジトリです。
+上記は公開予定のURLです。Pages設定と配信完了後に疎通を確認してください。
 
 ## GitHub Pages への公開
 
-公開用ファイルは `privacy-policy/index.html` です。外部のスクリプト・画像・フォントやビルドツールは使いません。
+現在のWeb公開経路は、アプリ本体リポジトリの手動デプロイworkflowでビルドした成果物を、このリポジトリの **`gh-pages`** ブランチへ配置する方式です。Pagesの公開元は **Deploy from a branch → gh-pages / (root)** に設定します。Web移行前の「main / (root)」の手順は使用しません。
 
-1. ポリシーの文面・制定日・問い合わせ窓口を確認して PR をマージする。
-2. リポジトリの Settings → Pages で、公開元を `main` ブランチの `/(root)` に設定する。
-3. Pages の公開完了後、ログインしていないブラウザと iPhone で次の URL を確認する。
+本番公開の設定・デプロイは所有者がレビュー後に実施します。このPRのマージだけでは、公開済みとは扱いません。
 
-予定 URL: https://kyzw.github.io/bookpocket-site/privacy-policy/
+## ポリシー本文の更新
 
-問い合わせ窓口は公開 Issues です。投稿には GitHub アカウントが必要で、内容が公開されます。個人情報や本棚のスクリーンショットを投稿しない案内を維持してください。
+`privacy-policy/index.html` は、本文のレビューと単体確認用のコピーです。原本はアプリ本体リポジトリの `docs/privacy-policy/index.html`。Webのビルド時に公開資材へコピーされ、`dist/privacy-policy/index.html` としてWebと同時に配信されます。本文の改訂は原本で行い、適用日も揃えてください。
 
-公開後は、文面を更新した PR のマージにより公開内容も更新されます。公開前に変更内容をレビューしてください。
+本番の `gh-pages` はビルド成果物で置き換わるため、手動で編集しません。アプリ本体の内部資料や接続情報をこの公開リポジトリへコピーしないでください。ポリシーのHTML単体は外部スクリプト・画像・フォントを使いません。
+
+公開後に、ログインしていないPC・実iPhoneで本文と問い合わせ先を開けること、PWAのアプリ画面からリンクで到達できることを確認します。
+
+問い合わせ窓口は公開Issuesです。投稿にはGitHubアカウントが必要で、内容は公開されます。個人情報・認証情報や本棚のスクリーンショットを投稿しない案内を維持してください。
